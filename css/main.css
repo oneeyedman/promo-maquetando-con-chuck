@@ -26,17 +26,18 @@ body {
   background: radial-gradient(99.54% 99.54% at 49.43% 50.46%, var(--color-light-blue) 0%, var(--color-correct-blue) 100%);
   font-family: Source Sans Pro, sans-serif;
   font-style: normal;
-  font-size: 35px;
-  line-height: 44px;
+  font-size: 47px;
+  line-height: 59px;
   color: var(--color-white);
+
 }
 
 .area::after {
   content: 'Maquetando con Chuck!';
   font-weight: bold;
-  font-size: 90px;
-  line-height: 113px;
-  height: 80px;
+  font-size: 120px;
+  line-height: 151px;
+  height: 107px;
   overflow: hidden;
   opacity: 0.2;
   position: absolute;
@@ -55,22 +56,22 @@ body {
 
 .area__time {
   position: absolute;
-  right: 40px;
-  top: 35px;
+  right: 53px;
+  top: 47px;
   display: flex;
   justify-content: end;
   align-items: center;
-  column-gap: 20px;
+  column-gap: 27px;
   z-index: 1;
 }
 
 .area__time::after {
   content: '';
-  height: 50px;
-  width: 47px;
+  height: 67px;
+  width: 63px;
   display: block;
   background: url(../img/ico-sound.svg) left top no-repeat;
-  background-size: auto 50px;
+  background-size: auto 67px;
 }
 
 .area__avatar {
@@ -81,17 +82,17 @@ body {
   transform: translate(-50%, -50%);
   width: 650px;
   box-shadow: 
-    0 0 0 10px white, 
-    0 0 50px rgb(0, 106, 204);
+    0 0 0 13px white, 
+    0 0 67px rgb(0, 106, 204);
   z-index: 3;
 }
 
 .area__controls {
   list-style: none;
   margin: 0;
-  padding: 0 0 10px;
+  padding: 0 0 13px;
   display: flex;
-  column-gap: 15px;
+  column-gap: 20px;
   position: absolute;
   left: 0;
   top: 0;
@@ -102,14 +103,14 @@ body {
 
 .area__control-media {
   font-family: inherit;
-  font-size: 16px;
-  border: 2px solid var(--color-correct-blue);
+  font-size: 21px;
+  border: 3px solid var(--color-correct-blue);
   background-color: transparent;
   color: var(--color-correct-blue);
-  padding: 5px 10px;
-  border-radius: 20px;
+  padding: 7px 13px;
+  border-radius: 27px;
   font-weight: 600;
-  min-width: 100px;
+  min-width: 133px;
 }
 
 
