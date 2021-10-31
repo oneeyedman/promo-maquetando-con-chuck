@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promo - Maquetando con Chuck!</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="area js__area">
+    <audio id="audio" class="js__audio" src="./audio/s02e09.mp3"></audio>
+    <canvas id="output" class="wave js__wave" height="1080" width="1080"></canvas>
+    
+    <img src="img/avatar.jpg" alt="" class="area__avatar">
+    <div class="area__info">
+      <strong>s02e09 - CSS Comb</strong><br>
+      twitch.tv/guanaiman<br>
+      31/10 - 10.30 am
+    </div>
+    <div class="area__time js__counter">-:--</div>
+    <ol class="area__controls">
+      <li class="area__control">
+        <button class="area__control-media js__media-play" type="button">Play</button>
+      </li>
+      <li class="area__control">
+        <button class="area__control-media js__media-pause" type="button">Pause</button>
+      </li>
+    </ol>
+  </div>
+  <script src="https://cdn.jsdelivr.net/gh/foobar404/wave.js/dist/bundle.iife.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

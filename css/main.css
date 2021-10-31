@@ -1,0 +1,133 @@
+/* GENERAL */
+:root {
+  --color-white: white;
+  --color-light-blue: #79C8F8;
+  --color-correct-blue: #008aff;
+  --promo-size: 1440px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+
+
+
+
+/* MAIN AREA */
+.area {
+  width: var(--promo-size);
+  height: var(--promo-size);
+  position: relative;
+  background: radial-gradient(99.54% 99.54% at 49.43% 50.46%, var(--color-light-blue) 0%, var(--color-correct-blue) 100%);
+  font-family: Source Sans Pro, sans-serif;
+  font-style: normal;
+  font-size: 35px;
+  line-height: 44px;
+  color: var(--color-white);
+}
+
+.area::after {
+  content: 'Maquetando con Chuck!';
+  font-weight: bold;
+  font-size: 90px;
+  line-height: 113px;
+  height: 80px;
+  overflow: hidden;
+  opacity: 0.2;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0);
+  white-space: nowrap;
+}
+
+.area__info {
+  position: absolute;
+  left: 40px;
+  top: 35px;
+  z-index: 1;
+}
+
+.area__time {
+  position: absolute;
+  right: 40px;
+  top: 35px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  column-gap: 20px;
+  z-index: 1;
+}
+
+.area__time::after {
+  content: '';
+  height: 50px;
+  width: 47px;
+  display: block;
+  background: url(../img/ico-sound.svg) left top no-repeat;
+  background-size: auto 50px;
+}
+
+.area__avatar {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  width: 650px;
+  box-shadow: 
+    0 0 0 10px white, 
+    0 0 50px rgb(0, 106, 204);
+  z-index: 3;
+}
+
+.area__controls {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 10px;
+  display: flex;
+  column-gap: 15px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateX(-110%);
+}
+
+.area__control {}
+
+.area__control-media {
+  font-family: inherit;
+  font-size: 16px;
+  border: 2px solid var(--color-correct-blue);
+  background-color: transparent;
+  color: var(--color-correct-blue);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+  min-width: 100px;
+}
+
+
+
+
+
+
+.wave {
+  opacity: 0;
+  position: relative;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  z-index: 2;
+  transition: opacity ease .5s;
+}
+
+.wave--active {
+  opacity: .5;
+}
