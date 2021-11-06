@@ -1,5 +1,6 @@
 import { initPromoInfo, initWaveElement } from './config.js';
 import { endThis, clearEnding } from './ending.js';
+import { startRecording } from './screen-recorder.js';
 
 const mainZone = document.querySelector('.js__area');
 const play = mainZone.querySelector('.js__media-play');
@@ -39,6 +40,7 @@ function initPromo() {
 
   play.addEventListener('click', () => {
     clearEnding();
+    startRecording();
     audio.play();
     if (totalSeconds === 0) {
       counter.innerHTML = '0:00';
