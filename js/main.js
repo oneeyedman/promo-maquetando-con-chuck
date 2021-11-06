@@ -3,6 +3,7 @@
 const area = document.querySelector('.js__area');
 const play = area.querySelector('.js__media-play');
 const pause = area.querySelector('.js__media-pause');
+const stop = area.querySelector('.js__media-stop');
 const audio = area.querySelector('.js__audio');
 const waveGraph = area.querySelector('.js__wave');
 const counter = area.querySelector('.js__counter');
@@ -14,7 +15,7 @@ let totalSeconds = 0;
 
 function setTime() {
   totalSeconds++;
-  const seconds = ('0' + totalSeconds % 60).slice(-2)
+  const seconds = ('0' + totalSeconds % 60).slice(-2);
   const time = `${parseInt(totalSeconds / 60)}:${seconds}`;
   counter.innerHTML = time;
 }
@@ -43,10 +44,19 @@ play.addEventListener( 'click', () => {
   waveGraph.classList.add('wave--active');
 } );
 
-pause.addEventListener( 'click', () => {
+pause && pause.addEventListener( 'click', () => {
   clearInterval(timer);
   waveGraph.classList.remove('wave--active');
   audio.pause();
+  isTimerActive = false;
+});
+
+stop.addEventListener( 'click', () => {
+  clearInterval(timer);
+  waveGraph.classList.remove('wave--active');
+  audio.pause();
+  audio.currentTime = 0;
+  counter.innerHTML = '-:--';
   isTimerActive = false;
 });
 
