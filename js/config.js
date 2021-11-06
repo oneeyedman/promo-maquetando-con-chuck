@@ -5,7 +5,7 @@ const PROMO = {
   date: '7 de noviembre',
   date_abbr: '7/11',
   audio: 's02e10.mp3'
-}
+};
 
 
 
@@ -26,13 +26,25 @@ function initPromoInfo(wrapper) {
   promoTitle.textContent = `${getFullEpisodeCode(PROMO)} - ${PROMO.title}`;
   promoDateAbbr.textContent = PROMO.date_abbr;
   promoDate.textContent = PROMO.date;
-
 }
 
 
 
 
 
+function initWaveElement(wave) {
+  const pixels = wave.closest('.js__wave-container').offsetHeight;
+  console.log({pixels});
+  wave.width = pixels;
+  wave.height = pixels;
+}
+
+
+
+
+
+
 export {
-  initPromoInfo
+  initPromoInfo,
+  initWaveElement
 };

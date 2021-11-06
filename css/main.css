@@ -1,3 +1,7 @@
+html {
+  font-size: 0.6875rem;
+}
+
 .promo {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -6,13 +10,12 @@
   display: -ms-flexbox;
   display: flex;
   font-family: Roboto, sans-serif;
+  font-size: 1rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0;
   min-height: 100vh;
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
 }
 
 .promo__main-zone {
@@ -85,7 +88,7 @@
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 650px;
+  width: 40.625rem;
   z-index: 3;
 }
 
@@ -114,6 +117,7 @@
 }
 
 .promo__wave {
+  height: 68.75rem;
   left: 50%;
   opacity: 0;
   position: relative;
@@ -123,6 +127,7 @@
           transform: translate(-50%, -50%) rotate(-90deg);
   -webkit-transition: opacity ease .5s;
   transition: opacity ease .5s;
+  width: 68.75rem;
   z-index: 2;
 }
 
@@ -219,5 +224,129 @@
 .promo__ending--active {
   height: 100%;
   opacity: 1;
+}
+
+.promo__ending--active::before {
+  -webkit-animation: smile 1.75s ease 2s both;
+          animation: smile 1.75s ease 2s both;
+}
+
+.promo__ending--active .promo__ending-title {
+  -webkit-animation: title 1.75s ease .5s both;
+          animation: title 1.75s ease .5s both;
+}
+
+.promo__ending--active .promo__ending-streaming {
+  -webkit-animation: streaming 2s ease .65s both;
+          animation: streaming 2s ease .65s both;
+}
+
+.promo__ending--active .promo__ending-avatar {
+  -webkit-animation: avatar 2s ease .75s both;
+          animation: avatar 2s ease .75s both;
+}
+
+@-webkit-keyframes streaming {
+  0% {
+    -webkit-transform: translateY(300%);
+            transform: translateY(300%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes streaming {
+  0% {
+    -webkit-transform: translateY(300%);
+            transform: translateY(300%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes avatar {
+  0% {
+    -webkit-transform: translateY(200%);
+            transform: translateY(200%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes avatar {
+  0% {
+    -webkit-transform: translateY(200%);
+            transform: translateY(200%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes title {
+  0% {
+    -webkit-transform: translate(-50%, -800%);
+            transform: translate(-50%, -800%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(-50%, 0);
+            transform: translateY(-50%, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes title {
+  0% {
+    -webkit-transform: translate(-50%, -800%);
+            transform: translate(-50%, -800%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(-50%, 0);
+            transform: translateY(-50%, 0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes smile {
+  0% {
+    -webkit-transform: translate(-50%, -550%) rotate(90deg);
+            transform: translate(-50%, -550%) rotate(90deg);
+    -webkit-transform-origin: center -750%;
+            transform-origin: center -750%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -550%) rotate(0);
+            transform: translate(-50%, -550%) rotate(0);
+    -webkit-transform-origin: center -750%;
+            transform-origin: center -750%;
+    opacity: 1;
+  }
+}
+
+@keyframes smile {
+  0% {
+    -webkit-transform: translate(-50%, -550%) rotate(90deg);
+            transform: translate(-50%, -550%) rotate(90deg);
+    -webkit-transform-origin: center -750%;
+            transform-origin: center -750%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -550%) rotate(0);
+            transform: translate(-50%, -550%) rotate(0);
+    -webkit-transform-origin: center -750%;
+            transform-origin: center -750%;
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,11 +1,13 @@
-import { initPromoInfo } from './config.js';
+import { initPromoInfo, initWaveElement } from './config.js';
 import { endThis } from './ending.js';
 
 const mainZone = document.querySelector('.js__area');
 const play = mainZone.querySelector('.js__media-play');
 const pause = mainZone.querySelector('.js__media-pause');
 const stop = mainZone.querySelector('.js__media-stop');
+const ending = mainZone.querySelector('.js__media-ending');
 const audio = mainZone.querySelector('.js__audio');
+const waveGraphContainer = mainZone.querySelector('.js__wave-container');
 const waveGraph = mainZone.querySelector('.js__wave');
 const counter = mainZone.querySelector('.js__counter');
 
@@ -27,7 +29,7 @@ function setTime() {
 
 function initPromo() {
   initPromoInfo(mainZone);
-  endThis();
+  initWaveElement(waveGraph);
 
   wave.fromElement("audio", "wave", {
     type: "flower",
@@ -45,19 +47,19 @@ function initPromo() {
       timer = setInterval(setTime, 1000);
       isTimerActive = true;
     }
-    waveGraph.classList.add('promo__wave--active');
+    waveGraphContainer.classList.add('promo__wave--active');
   });
 
   pause && pause.addEventListener('click', () => {
     clearInterval(timer);
-    waveGraph.classList.remove('promo__wave--active');
+    waveGraphContainer.classList.remove('promo__wave--active');
     audio.pause();
     isTimerActive = false;
   });
 
   stop.addEventListener('click', () => {
     clearInterval(timer);
-    waveGraph.classList.remove('promo__wave--active');
+    waveGraphContainer.classList.remove('promo__wave--active');
     audio.pause();
     audio.currentTime = 0;
     counter.innerHTML = '-:--';
@@ -67,9 +69,19 @@ function initPromo() {
   audio.addEventListener('ended', (event) => {
     clearInterval(timer);
     isTimerActive = false;
-    waveGraph.classList.remove('promo__wave--active');
+    waveGraphContainer.classList.remove('promo__wave--active');
     console.log('Audio parao!');
   });
+
+  ending.addEventListener('click', () => {
+    clearInterval(timer);
+    waveGraphContainer.classList.remove('promo__wave--active');
+    audio.pause();
+    audio.currentTime = 0;
+    counter.innerHTML = '-:--';
+    isTimerActive = false;
+    endThis();
+  })
   
 }
 
