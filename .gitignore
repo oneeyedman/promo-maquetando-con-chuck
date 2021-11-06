@@ -1,6 +1,20 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/macos,linux,windows,visualstudiocode
-# Edit at https://www.toptal.com/developers/gitignore?templates=macos,linux,windows,visualstudiocode
+# Created by https://www.toptal.com/developers/gitignore/api/linux,macos,windows,visualstudiocode,sass,audio
+# Edit at https://www.toptal.com/developers/gitignore?templates=linux,macos,windows,visualstudiocode,sass,audio
+
+### Audio ###
+*.aif
+*.iff
+*.m3u
+*.m4a
+*.mid
+*.mp3
+*.mpa
+*.ra
+*.wav
+*.wma
+*.ogg
+*.flac
 
 ### Linux ###
 *~
@@ -46,6 +60,12 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+### Sass ###
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
@@ -61,6 +81,9 @@ Temporary Items
 # Ignore all local history of files
 .history
 .ionide
+
+# Support for Project snippet scope
+!.vscode/*.code-snippets
 
 ### Windows ###
 # Windows thumbnail cache files
@@ -88,6 +111,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/macos,linux,windows,visualstudiocode
-
-*.mp3
+# End of https://www.toptal.com/developers/gitignore/api/linux,macos,windows,visualstudiocode,sass,audio
