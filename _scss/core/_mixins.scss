@@ -1,0 +1,14 @@
+@mixin maquetandoConChuck() {
+	bottom: 0;
+	content: 'Maquetando con Chuck!';
+	font-size: rem(120);
+	font-weight: bold;
+	height: rem(96);;
+	left: 50%;
+	line-height: rem(151);
+	opacity: .2;
+	overflow: hidden;
+	position: absolute;
+	transform: translate(-50%, 0);
+	white-space: nowrap;
+}
