@@ -6,20 +6,21 @@
   --promo-size: 1440px;
 }
 
-body {
+.promo {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0;
+  transform: scale(.5);
 }
 
 
 
 
 
-/* MAIN AREA */
-.area {
+/* MAIN ZONE */
+.promo__main-zone {
   width: var(--promo-size);
   height: var(--promo-size);
   position: relative;
@@ -32,7 +33,7 @@ body {
 
 }
 
-.area::after {
+.promo__main-zone::after {
   content: 'Maquetando con Chuck!';
   font-weight: bold;
   font-size: 120px;
@@ -47,14 +48,14 @@ body {
   white-space: nowrap;
 }
 
-.area__info {
+.promo__info {
   position: absolute;
   left: 40px;
   top: 35px;
   z-index: 1;
 }
 
-.area__time {
+.promo__time {
   position: absolute;
   right: 53px;
   top: 47px;
@@ -65,7 +66,7 @@ body {
   z-index: 1;
 }
 
-.area__time::after {
+.promo__time::after {
   content: '';
   height: 67px;
   width: 63px;
@@ -74,7 +75,7 @@ body {
   background-size: auto 67px;
 }
 
-.area__avatar {
+.promo__avatar {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -87,21 +88,20 @@ body {
   z-index: 3;
 }
 
-.area__controls {
+.promo__controls {
   list-style: none;
   margin: 0;
   padding: 0 0 13px;
-  display: flex;
-  column-gap: 20px;
+  display: block;
   position: absolute;
   left: 0;
   top: 0;
   transform: translateX(-110%);
 }
 
-.area__control {}
+.promo__control {}
 
-.area__control-media {
+.promo__control-media {
   font-family: inherit;
   font-size: 21px;
   border: 3px solid var(--color-correct-blue);
@@ -118,7 +118,7 @@ body {
 
 
 
-.wave {
+.promo__wave {
   opacity: 0;
   position: relative;
   position: absolute;
@@ -129,6 +129,6 @@ body {
   transition: opacity ease .5s;
 }
 
-.wave--active {
+.promo__wave--active {
   opacity: .5;
 }
