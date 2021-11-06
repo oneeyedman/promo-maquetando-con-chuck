@@ -4,7 +4,8 @@ const PROMO = {
   title: 'Checkbox y Radio',
   date: '7 de noviembre',
   date_abbr: '7/11',
-  audio: 's02e10.mp3'
+  audio: 's02e10.mp3',
+  ending: 3
 };
 
 
@@ -45,6 +46,7 @@ function initWaveElement(wave) {
 
 
 export {
+  PROMO,
   initPromoInfo,
   initWaveElement
 };

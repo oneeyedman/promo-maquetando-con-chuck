@@ -1,4 +1,4 @@
-import { initPromoInfo, initWaveElement } from './config.js';
+import { initPromoInfo, initWaveElement, PROMO} from './config.js';
 import { endThis, clearEnding } from './ending.js';
 
 const mainZone = document.querySelector('.js__area');
@@ -18,9 +18,14 @@ let isTimerActive = false;
 
 const wave = new Wave();
 let totalSeconds = 0;
+const audioDuration = parseInt(audio.duration) - PROMO.ending;
+audio.volume = 1;
 
 
 function setTime() {
+  if (totalSeconds === audioDuration) {
+    endThis();
+  }
   totalSeconds++;
   const seconds = ('0' + totalSeconds % 60).slice(-2);
   const time = `${parseInt(totalSeconds / 60)}:${seconds}`;
@@ -75,12 +80,6 @@ function initPromo() {
   });
 
   ending.addEventListener('click', () => {
-    clearInterval(timer);
-    waveGraphContainer.classList.remove('promo__wave--active');
-    audio.pause();
-    audio.currentTime = 0;
-    counter.innerHTML = '-:--';
-    isTimerActive = false;
     endThis();
   })
   
