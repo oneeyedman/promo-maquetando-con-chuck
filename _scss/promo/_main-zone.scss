@@ -1,0 +1,105 @@
+// MAIN ZONE
+.promo__main-zone {
+	background: $background-promo;
+	color: $color-white;
+	font-size: rem(47);
+	font-style: normal;
+	height: rem($promo-size);
+	line-height: rem(59);
+	position: relative;
+	width: rem($promo-size);
+
+	&::after {
+		@include maquetandoConChuck();
+	}
+}
+
+.promo__info {
+	left: rem(40);
+	position: absolute;
+	top: rem(35);
+	z-index: 1;
+}
+
+.promo__time {
+	align-items: center;
+	column-gap: rem(27);
+	display: flex;
+	justify-content: end;
+	position: absolute;
+	right: rem(53);
+	top: rem(47);
+	z-index: 1;
+}
+
+.promo__time::after {
+	background: url(../img/ico-sound.svg) left top no-repeat;
+	background-size: auto rem(67);
+	content: '';
+	display: block;
+	height: rem(67);
+	width: rem(63);
+}
+
+.promo__avatar {
+	border-radius: 50%;
+	box-shadow: 0 0 0 rem(13) $color-white,
+	0 0 rem(67) $color-blue-shadow;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: rem(650);
+	z-index: 3;
+}
+
+
+
+
+
+// CONTROLS
+.promo__controls {
+	display: block;
+	left: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0 0 rem(13);
+	position: absolute;
+	top: 0;
+	transform: translateX(-110%);
+}
+
+.promo__control-media {
+	background-color: transparent;
+	border: rem(3) solid $color-correct-blue;
+	border-radius: rem(27);
+	color: $color-correct-blue;
+	font-family: inherit;
+	font-size: rem(21);
+	font-weight: 600;
+	min-width: rem(133);
+	padding: rem(7) rem(13);
+}
+
+
+
+
+
+
+// WAVE
+.promo__wave {
+	height: rem(1100);
+	left: 50%;
+	opacity: 0;
+	position: relative;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%) rotate(-90deg);
+	transition: opacity ease .5s;
+	width: rem(1100);
+	z-index: 2;
+}
+
+.promo__wave--active {
+	opacity: .5;
+}

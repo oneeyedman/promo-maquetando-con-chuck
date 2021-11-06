@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,28 +7,53 @@
   <title>Promo - Maquetando con Chuck!</title>
   <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-  <div class="area js__area">
-    <audio id="audio" class="js__audio" src="./audio/s02e10.mp3"></audio>
-    <canvas id="output" class="wave js__wave" height="1080" width="1080"></canvas>
+<body class="promo">
+  <section class="promo__main-zone js__area">
     
-    <img src="img/avatar.jpg" alt="" class="area__avatar">
-    <div class="area__info">
-      <strong>s02e10 - Checkbox y Radio</strong><br>
-      twitch.tv/guanaiman<br>
-      7/11 - 10.30 am
+    <audio id="audio" class="promo__audio js__audio" src="./audio/s02e10.mp3"></audio>
+    <div class="promo__wave js__wave-container">
+      <canvas id="wave" class="js__wave"></canvas>
     </div>
-    <div class="area__time js__counter">-:--</div>
-    <ol class="area__controls">
-      <li class="area__control">
-        <button class="area__control-media js__media-play" type="button">Play</button>
+    
+    <img src="img/avatar.jpg" alt="" class="promo__avatar">
+    
+    <div class="promo__info">
+      <strong class="js__init-title">[*TITULO*]</strong><br>
+      twitch.tv/guanaiman<br>
+      <span class="js__init-date-abbr">[*FECHA CORTA*]</span> - 10.30am
+    </div>
+    
+    <div class="promo__time js__counter">-:--</div>
+    
+    <ol class="promo__controls">
+      <li class="promo__control">
+        <button class="promo__control-media js__media-play" type="button">Play</button>
       </li>
-      <li class="area__control">
-        <button class="area__control-media js__media-stop" type="button">Stop</button>
+      <li class="promo__control">
+        <button class="promo__control-media js__media-stop" type="button">Stop</button>
+      </li>
+      <li class="promo__control">
+        <button class="promo__control-media js__media-pause" type="button">Pause</button>
+      </li>
+      <li class="promo__control">
+        <button class="promo__control-media js__media-ending" type="button">FIN</button>
       </li>
     </ol>
-  </div>
+
+    <aside class="promo__ending js__ending">
+      <h1 class="promo__ending-title">Te bajas a maquetar?</h1>
+      <div class="promo__ending-info">
+        <div class="promo__ending-streaming">
+          <div class="promo__ending-url">twitch.tv/guanaiman</div>
+          <span class="js__init-date">[*FECHA LARGA*]</span><br>10.30am
+        </div>
+        <div class="promo__ending-avatar">
+          <img src="./img/avatar.jpg" alt="Lego bohemian Chuck" class="promo__ending-avatar-image">
+        </div>
+      </div>
+    </aside>
+  </section>
   <script src="https://cdn.jsdelivr.net/gh/foobar404/wave.js/dist/bundle.iife.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/main.js" type="module"></script>
 </body>
 </html>
